@@ -1,0 +1,13 @@
+{% extends 'Base.html' %}
+{% block title %}
+Register Screen
+{% endblock %}
+{% block body %}
+<h1>this is register screen</h1>
+<h2>this is register screen</h2>
+    <form method="POST" novalidate>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Register</button>
+    </form>
+{% endblock %}
