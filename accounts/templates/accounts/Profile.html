@@ -1,0 +1,26 @@
+{% extends 'Base.html' %}
+{% block title %}
+    Profile Page
+{% endblock %}
+{% block body %}
+    <h1>This is Profile Page</h1>
+    <table>
+    <tr>
+        <th>user: {{ profile.user.username }}</th>
+    </tr>
+    <tr>
+        <th>name: {{ profile.user.first_name }}{{ profile.user.last_name }}</th>
+    </tr>
+        <tr>
+        <th>last name: {{ profile.user.last_name }}</th>
+    </tr>
+        <tr>
+        <th>email: {{ profile.user.email }}</th>
+    </tr>
+    <tr>
+        <th>phone number: {{ profile.phone }}</th>
+    </tr><tr>
+        <th>address: {{ profile.address }}</th>
+    </tr>
+    </table>
+{% endblock %}
