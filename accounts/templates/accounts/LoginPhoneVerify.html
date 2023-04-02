@@ -1,0 +1,14 @@
+{% extends 'Base.html' %}
+{% block title %}
+    Login phone verify
+{% endblock %}
+{% block body %}
+<h1>This is Login phone verify page</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">confirm</button>
+    </form>
+
+{% endblock %}

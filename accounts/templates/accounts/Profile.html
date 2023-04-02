@@ -23,4 +23,6 @@
         <th>address: {{ profile.address }}</th>
     </tr>
     </table>
+    <a href="{% url 'accounts:update' %}">update profile</a>
+    <a href="{% url 'accounts:change_password' %}">change password</a>
 {% endblock %}
