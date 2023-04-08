@@ -1,11 +1,15 @@
 {% extends 'Base.html' %}
+{% load static %}
 {% block title %}
 Register Screen
+{% endblock %}
+{% block css %}
+<link rel="stylesheet" href={% static 'accounts/register.css' %}>
 {% endblock %}
 {% block body %}
 <h1>this is register page</h1>
 <h2>this is register page</h2>
-    <form method="POST" novalidate>
+    <form method="POST" novalidate class="register_form">
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit">Register</button>

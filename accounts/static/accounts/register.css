@@ -1,0 +1,19 @@
+
+.register_form{
+    background-color: grey;
+    margin: 150px auto;
+    padding: 30px;
+    width: 40%;
+    text-align: center;
+    border-radius: 20px;
+    align-content: center;
+}
+.register_form label{
+    display: block;
+    color: white;
+}
+.register_form input{
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 80%;
+}

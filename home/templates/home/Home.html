@@ -4,4 +4,9 @@ Home Screen
 {% endblock %}
 {% block body %}
 <h1>welcome to the home screen</h1>
+    {% for categ in category %}
+        <h2>{{ categ.name }}</h2>
+        <img src="{{ categ.image.url }}" width="150px" height="150px" alt="{{ categ.name }}">
+    {% endfor %}
+    
 {% endblock %}

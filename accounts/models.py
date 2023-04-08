@@ -8,7 +8,7 @@ class Profile(models.Model):
     address = models.TextField(max_length=300,null=True,blank=True)
 
     def __str__(self):
-        return  self.user.username
+        return self.user.username
 
 def save_profile_user(sender,**kwargs):
     if kwargs['created']:
