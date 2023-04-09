@@ -4,4 +4,21 @@ Product screen
 {% endblock %}
 {% block body %}
 <h1>welcome to the product screen</h1>
+    {% for product in products %}
+
+         <a href="{% url 'home:product_detail' product.id %}">
+         <h2>{{ product.name }}</h2>
+       </a>
+       <a href="{% url 'home:product_detail' product.id %}">
+        <img src="{{ product.image.url }}" style="width: 100px; height: 100px" alt="{{ product.name }}">
+       </a>
+         {% if product.discount %}
+        <h4 style="text-decoration: line-through">price: {{ product.product_price }}</h4>
+        <h3 >after discount: {{ product.total_price }}</h3>
+
+     {% else %}
+        <small>price: {{ product.total_price }}</small>
+        {% endif %}
+    {% endfor %}
+    
 {% endblock %}
