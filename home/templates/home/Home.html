@@ -5,7 +5,7 @@
 {% block body %}
     <h1>welcome to the home screen</h1>
     {% for categ in category %}
-        <a href="{% url 'home:category' categ.id %}">
+        <a href="{{    categ.get_absolute_url }}">
             <h2>{{ categ.name }}</h2>
             <img src="{{ categ.image.url }}" width="150px" height="150px" alt="{{ categ.name }}">
         </a>
